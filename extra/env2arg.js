@@ -9,6 +9,7 @@ let replacedArgs = [];
 
 for (let arg of args) {
     for (let key in env) {
+        console.log(arg);
         arg = arg.replaceAll(`$${key}`, env[key]);
     }
     replacedArgs.push(arg);
